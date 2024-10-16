@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>
             Fresh Food For All
@@ -9,19 +10,25 @@
     <body>
         <header></header>
         <nav>
+
             <!-- ToDo: An unordered list to represent the menu, 
                        each list item should correspond to the menu items (Home, Register, Login, Help)
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
             <ul class="navlist">
+                <li><a href="">Home</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Help</a></li>
             </ul>
          </nav>
         <main>
             <!-- Check Week 2 Lecture to learn about HTML5 semantic elements-->
             <aside>
+                <input type="text" class="Search" placeholder="Search"> </input>
             </aside>
             <section>
-                <form class="center" novalidate>
+                <form class="center" novalidate id="form">
                 <!-- ToDo: Implement the form containing 
                            Name - type text
                            email- type text
@@ -32,16 +39,35 @@
                            Check lecture slides and the links on the slides to learn about forms
                            and how to create a button that would react to a click Event
                         -->
+                    <div class="name">
+                        <div class="nameheading">Name</div>
+                        <input type="text" name="name" id="" class="textbox" />
+                    </div>
+                    <div class="email">
+                        <div class="emailheading">Email</div>
+                        <input type="text" name="" id="" class="textbox" />
+                    </div>
+                    <div class="Password">
+                        <div class="passwordheading">Password</div>
+                        <input type="password" name="" class="textbox" />
+                    </div>
+                    <div class="confirmpass">
+                        <div class="confirmpasstext">Re-Type Password</div>
+                        <input type="password" name="" class="textbox" />
+                    </div>
+
                     <!-- Example given for user type checkboxes-->
                     
                     <input type="checkbox" id="buyer" name="buyer" value="buyer">
                     <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
                     <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
-
+                    <label for="seller">I want to sell produce from my allotment.</label><br><br><br>
+                    <input type="checkbox" name="Terms" id="">
+                    <label for="Terms">I agree the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a></label>
                     <br><br>
+                    <input type="button" value="Register">| <a href="">Learn more</a>
                 </form>
-                <div class="center" id="hiddenSection">
+                <div class="center" id="hiddenSection" id="bottomform">
                     <p id="hiddenParagraph"></p>
                 </div>
             </section>
