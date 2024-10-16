@@ -5,6 +5,7 @@
         <title>
             Fresh Food For All
         </title>
+        <script src="CS2001-Week2-Registration.js"></script>
         <link rel="stylesheet" href="CS2001-Week2-Registration.css">
     </head>
     <body>
@@ -28,7 +29,7 @@
                 <input type="text" class="Search" placeholder="Search"> </input>
             </aside>
             <section>
-                <form class="center" novalidate id="form">
+                <form class="center"  id="form" onsubmit="return validation(event)" >
                 <!-- ToDo: Implement the form containing 
                            Name - type text
                            email- type text
@@ -41,19 +42,19 @@
                         -->
                     <div class="name">
                         <div class="nameheading">Name</div>
-                        <input type="text" name="name" id="" class="textbox" />
+                        <input type="text" class="textbox" id="name"/>
                     </div>
                     <div class="email">
                         <div class="emailheading">Email</div>
-                        <input type="text" name="" id="" class="textbox" />
+                        <input type="text" class="textbox" id="email"/>
                     </div>
                     <div class="Password">
                         <div class="passwordheading">Password</div>
-                        <input type="password" name="" class="textbox" />
+                        <input type="password" class="password" id="password"/>
                     </div>
                     <div class="confirmpass">
                         <div class="confirmpasstext">Re-Type Password</div>
-                        <input type="password" name="" class="textbox" />
+                        <input type="password" name="" class="password" id="confirmpass"/>
                     </div>
 
                     <!-- Example given for user type checkboxes-->
@@ -62,10 +63,10 @@
                     <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
                     <input type="checkbox" id="seller" name="seller" value="seller">
                     <label for="seller">I want to sell produce from my allotment.</label><br><br><br>
-                    <input type="checkbox" name="Terms" id="">
+                    <input type="checkbox" name="Terms" id="Terms">
                     <label for="Terms">I agree the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a></label>
                     <br><br>
-                    <input type="button" value="Register">| <a href="">Learn more</a>
+                    <input type="submit" value="Register">| <a href="">Learn more</a>
                 </form>
                 <div class="center" id="hiddenSection" id="bottomform">
                     <p id="hiddenParagraph"></p>
